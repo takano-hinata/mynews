@@ -19,7 +19,7 @@
                     <div class="form-group row">
                         <lavel class="col-md-2">名前</lavel>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}" placeholder="氏名を入力">
+                            <input type="text" class="form-control" name="name" value="{{ old('title') }}" placeholder="氏名を入力">
                         </div>
                     </div>
                     
@@ -45,7 +45,7 @@
                     <div class="form-group row">
                         <label class="col-md-2">自己紹介欄</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="body" rows="20" placeholder="自己紹介文を入力">{{ old('body') }}</textarea>
+                            <textarea class="form-control" name="introduction" rows="20" placeholder="自己紹介文を入力">{{ old('body') }}</textarea>
                         </div>
                     </div>
                     
