@@ -19,7 +19,7 @@
         <div class="form-group row">
           <lavel class="col-md-2">名前</lavel>
           <div class="col-md-10">
-            <input type="text" class="form-control" name="name" value="{{ old('title') }}" placeholder="氏名を入力">
+            <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="氏名を入力">
           </div>
         </div>
 
