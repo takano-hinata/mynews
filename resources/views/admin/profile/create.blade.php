@@ -26,12 +26,7 @@
         <div class="form-group row">
           <label class="col-md-2">性別</label>
           <div class="col-md-10">
-            <select class="form-control" name="gender">
-              <option value="">性別を選択</option>
-              <option value="男">男</option>
-              <option value="女">女</option>
-              <option value="その他">その他</option>
-            </select>
+            <input type="text" class="form-control" name="gender" value="{{ old('gender') }}" placeholder="性別を選択">
           </div>
         </div>
 

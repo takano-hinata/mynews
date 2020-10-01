@@ -24,14 +24,9 @@
         </div>
 
         <div class="form-group row">
-          <label class="col-md-2">性別</label>
+          <label class="col-md-2"　name="gender">性別</label>
           <div class="col-md-10">
-            <select class="form-control" name="gender">
-              <option value="">{{ $profile_form->gender }}</option>
-              <option value="男">男</option>
-              <option value="女">女</option>
-              <option value="その他">その他</option>
-            </select>
+           <input type="text" class="form-control" name="gender" value="{{ $profile_form->gender }}" placeholder="性別を選択">
           </div>
         </div>
 
@@ -51,6 +46,18 @@
         {{ csrf_field() }}
         <input type="submit" class="btn btn-primary" value="更新">
       </form>
+      <div class="row mt-5">
+                    <div class="col-md-4 mx-auto">
+                        <h2>更新履歴</h2>
+                        <ul class="list-group">
+                            @if ($profile_form->profile_histories　!= NULL)
+                                @foreach ($profile_from->profile_histories as $profile_history)
+                                    <li class="list-group-item">{{ $profile_history ->edited_at }}</li>
+                                @endforeach
+                            @endif
+                        </ul>
+                    </div>
+                </div>
     </div>
   </div>
 </div>
