@@ -26,7 +26,9 @@
         <div class="form-group row">
           <label class="col-md-2"　name="gender">性別</label>
           <div class="col-md-10">
-           <input type="text" class="form-control" name="gender" value="{{ $profile_form->gender }}" placeholder="性別を選択">
+           <input type="radio"  name="gender" value="男性">男性&emsp;
+           <input type="radio"  name="gender" value="女性">女性&emsp;
+           <input type="radio"  name="gender" value="その他">その他
           </div>
         </div>
 
@@ -56,7 +58,7 @@
                         <h2>更新履歴</h2>
                         <ul class="list-group">
                             @if ($profile_form->profile_histories != NULL)
-                                @foreach ($profile_from->profile_histories as $profile_history)
+                                @foreach ($profile_form->profile_histories as $profile_history)
                                     <li class="list-group-item">{{ $profile_history->edited_at }}</li>
                                 @endforeach
                             @endif
