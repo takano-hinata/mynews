@@ -21,10 +21,10 @@ Route::get('XXX', 'AAAController@bbb');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('profile/create', 'Admin\ProfileController@add');
+    Route::post('profile/create', 'Admin\ProfileController@create');
     Route::get('profile', 'Admin\ProfileController@index');
     Route::get('profile/edit', 'Admin\ProfileController@edit');
     Route::post('profile/edit', 'Admin\ProfileController@update');
-    Route::post('profile/create', 'Admin\ProfileController@create');
     Route::get('profile/delete', 'Admin\ProfileController@delete');
     Route::get('news/create', 'Admin\NewsController@add');
     Route::post('news/create', 'Admin\NewsController@create');
