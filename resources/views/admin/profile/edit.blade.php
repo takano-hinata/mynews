@@ -26,9 +26,19 @@
         <div class="form-group row">
           <label class="col-md-2"　name="gender">性別</label>
           <div class="col-md-10">
-           <input type="radio"  name="gender" value="男性">男性&emsp;
-           <input type="radio"  name="gender" value="女性">女性&emsp;
-           <input type="radio"  name="gender" value="その他">その他
+          @if ($profile_form->gender == "男性") 
+          <input type="radio" name="gender" value="男性" checked>男性&emsp;
+          <input type="radio" name="gender" value="女性">女性&emsp;
+          <input type="radio" name="gender" value="その他">その他
+          @elseif ($profile_form->gender == "女性") 
+          <input type="radio" name="gender" value="男性">男性&emsp;
+          <input type="radio" name="gender" value="女性" checked>女性&emsp;
+          <input type="radio" name="gender" value="その他">その他
+          @else ($profile_form->gender == "その他")
+          <input type="radio" name="gender" value="男性">男性&emsp;
+          <input type="radio" name="gender" value="女性">女性&emsp;
+          <input type="radio" name="gender" value="その他" checked>その他
+          @endif
           </div>
         </div>
 
