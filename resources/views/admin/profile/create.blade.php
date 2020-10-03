@@ -19,7 +19,7 @@
         <div class="form-group row">
           <lavel class="col-md-2">名前</lavel>
           <div class="col-md-10">
-            <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="氏名を入力">
+            <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="山田　太郎">
           </div>
         </div>
 
@@ -35,14 +35,14 @@
         <div class="form-group row">
           <lavel class="col-md-2">趣味</lavel>
           <div class="col-md-10">
-            <textarea class="form-control" name="hobby" rows="5" placeholder="趣味を入力">{{ old('hobby') }}</textarea>
+            <textarea class="form-control" name="hobby" rows="5" placeholder="趣味を入力してください。">{{ old('hobby') }}</textarea>
           </div>
         </div>
 
         <div class="form-group row">
           <label class="col-md-2">自己紹介欄</label>
           <div class="col-md-10">
-            <textarea class="form-control" name="introduction" rows="20" placeholder="自己紹介文を入力">{{ old('introduction') }}</textarea>
+            <textarea class="form-control" name="introduction" rows="20" placeholder="自己紹介文を入力してください。">{{ old('introduction') }}</textarea>
           </div>
         </div>
         {{ csrf_field() }}

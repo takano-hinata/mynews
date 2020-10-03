@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class History extends Model
+class NewsHistory extends Model
 {
     protected $guarded = array('id');
     public static $rules = array(

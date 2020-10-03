@@ -39,10 +39,10 @@ class ProfileController extends Controller
         $profile_form = $request->all();
         unset($profile_form['_token']);
         $profile->fill($profile_form)->save();
-        $profile_history = new ProfileHistory;
-        $profile_history->profile_id = $profile->id;
-        $profile_history->edited_at = Carbon::now();
-        $profile_history->save();
+        $history = new ProfileHistory;
+        $history->profile_id = $profile->id;
+        $history->edited_at = Carbon::now();
+        $history->save();
         return redirect('admin/profile');
     }
     public function index(Request $request)

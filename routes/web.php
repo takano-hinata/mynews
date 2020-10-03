@@ -15,8 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-//課題3
 Route::get('XXX', 'AAAController@bbb');
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
